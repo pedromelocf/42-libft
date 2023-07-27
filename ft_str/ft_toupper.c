@@ -1,27 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pmelo-ca <pmelo-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/24 18:51:43 by pmelo-ca          #+#    #+#             */
-/*   Updated: 2023/07/24 19:01:32 by pmelo-ca         ###   ########.fr       */
+/*   Created: 2023/07/24 20:13:00 by pmelo-ca          #+#    #+#             */
+/*   Updated: 2023/07/25 11:21:16 by pmelo-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(char *str)
+int	ft_toupper(int c)
 {
-	int	index;
-
-	index = 0;
-	while (str[index])
-	{
-		if ((str[index] >= 'a' && str[index] <= 'z') || (str[index] >= 'A'
-				&& str[index <= 'Z']))
-			index++;
-		else
-			return (0);
-	}
-	return (1);
+	if (c >= 'a' && <= 'z')
+		c -= 32;
+	return (c);
 }

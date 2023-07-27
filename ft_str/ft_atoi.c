@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pmelo-ca <pmelo-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/24 19:53:18 by pmelo-ca          #+#    #+#             */
-/*   Updated: 2023/07/24 19:59:24 by pmelo-ca         ###   ########.fr       */
+/*   Created: 2023/07/25 12:17:27 by pmelo-ca          #+#    #+#             */
+/*   Updated: 2023/07/25 12:17:28 by pmelo-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-
-size_t	ft_strlen(char *str)
+int	atoi(const char *nptr)
 {
-	char	*string;
-	int		counter;
+	size_t i;
+	size_t c;
 
-	counter = 0;
-	string = str;
-	while (*string)
+	c = 0;
+	i = 0;
+	while (nptr[i])
 	{
-		string++;
-		counter++;
+		if ((nptr[i] >= '0') && (nptr[i] <= '9'))
+			c = c * 10 + (size_t)nptr[i] - '0';
+		else
+			return (c);
+		i++;
 	}
-	return (counter);
+	return (c);
 }

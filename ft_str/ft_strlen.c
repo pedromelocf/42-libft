@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pmelo-ca <pmelo-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/24 19:48:31 by pmelo-ca          #+#    #+#             */
-/*   Updated: 2023/07/24 19:51:42 by pmelo-ca         ###   ########.fr       */
+/*   Created: 2023/07/24 19:53:18 by pmelo-ca          #+#    #+#             */
+/*   Updated: 2023/07/25 10:59:48 by pmelo-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(char *str)
-{
-	int	index;
+#include <string.h>
 
-	index = 0;
-	while (str[index])
+size_t	ft_strlen(const char *str)
+{
+	char	*string;
+	int		counter;
+
+	counter = 0;
+	string = str;
+	while (*string)
 	{
-		if (str[index] >= 32 && str[index] <= 126)
-			index++;
-		else
-			return (0);
+		string++;
+		counter++;
 	}
-	return (1);
+	return (counter);
 }

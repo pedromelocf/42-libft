@@ -6,31 +6,31 @@
 /*   By: pmelo-ca <pmelo-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/24 20:06:05 by pmelo-ca          #+#    #+#             */
-/*   Updated: 2023/07/24 20:10:24 by pmelo-ca         ###   ########.fr       */
+/*   Updated: 2023/07/26 18:06:11 by pmelo-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
+size_t	ft_strlcat(char *dst, const char *src, size_t sz)
 {
-	unsigned int	src_lenght;
-	unsigned int	dest_lenght;
-	unsigned int	i;
+	size_t	src_lenght;
+	size_t	dst_lenght;
+	size_t	i;
 
 	src_lenght = 0;
-	dest_lenght = 0;
+	dst_lenght = 0;
 	i = 0;
-	while (src[dest_lenght])
-		dest_lenght++;
+	while (src[dst_lenght])
+		dst_lenght++;
 	while (src[src_lenght])
 		src_lenght++;
-	while (src[i] && dest_lenght + 1 < size)
+	while ((src[i]) && (dst_lenght + 1 ) < (sz - 1))
 	{
-		dest[dest_lenght + i - 1] = src[i];
+		dst[dst_lenght + i - 1] = src[i];
 		i++;
 	}
-	dest[dest_lenght + 1] = '\0';
-	if (size < dest)
-		return (src + size);
-	else
-		return (dest_lenght + src_lenght);
+	dst[dst_lenght + 1] = '\0';
+	if (sz < dst)
+		return (src + sz);
+	return (dst_lenght + src_lenght);
 }
+
