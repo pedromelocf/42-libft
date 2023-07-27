@@ -6,11 +6,11 @@
 /*   By: pmelo-ca <pmelo-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/26 09:09:21 by pmelo-ca          #+#    #+#             */
-/*   Updated: 2023/07/27 14:13:40 by pmelo-ca         ###   ########.fr       */
+/*   Updated: 2023/07/27 14:46:16 by pmelo-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+char	*ft_strnstr(char *big, const char *little, size_t len)
 {
 	size_t	i;
 	size_t	j;
@@ -24,7 +24,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		while (big[i] == little[j] && (i < len))
 		{
 			if (little[j + 1] == '\0')
-				return (*big[i - j]);
+				return (big[i - j]);
 			j++;
 			i++;
 		}
