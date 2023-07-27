@@ -6,13 +6,13 @@
 /*   By: pmelo-ca <pmelo-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/25 12:21:54 by pmelo-ca          #+#    #+#             */
-/*   Updated: 2023/07/25 13:14:20 by pmelo-ca         ###   ########.fr       */
+/*   Updated: 2023/07/27 10:39:47 by pmelo-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	while (s[i])
@@ -23,5 +23,5 @@ char *strchr(const char *s, int c)
 	}
 	if (c == '\0')
 		return (&s[i]);
-	return (void *)0;
+	return ((void *)0);
 }

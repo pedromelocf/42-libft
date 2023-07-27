@@ -6,14 +6,14 @@
 /*   By: pmelo-ca <pmelo-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/25 12:17:27 by pmelo-ca          #+#    #+#             */
-/*   Updated: 2023/07/25 12:17:28 by pmelo-ca         ###   ########.fr       */
+/*   Updated: 2023/07/27 10:39:43 by pmelo-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	atoi(const char *nptr)
+int	ft_atoi(const char *nptr)
 {
-	size_t i;
-	size_t c;
+	size_t	i;
+	size_t	c;
 
 	c = 0;
 	i = 0;

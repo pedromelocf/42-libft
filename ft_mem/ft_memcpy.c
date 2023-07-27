@@ -1,18 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pmelo-ca <pmelo-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/24 20:13:00 by pmelo-ca          #+#    #+#             */
-/*   Updated: 2023/07/27 10:11:54 by pmelo-ca         ###   ########.fr       */
+/*   Created: 2023/07/27 10:55:32 by pmelo-ca          #+#    #+#             */
+/*   Updated: 2023/07/27 10:59:52 by pmelo-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_toupper(int c)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	if (c >= 'a' && c <= 'z')
-		c -= 32;
-	return (c);
+	size_t	counter;
+
+	counter = 0;
+	while (counter < n)
+	{
+		(dest + counter) = (src + counter);
+		counter++;
+	}
+	return (dest);
 }
