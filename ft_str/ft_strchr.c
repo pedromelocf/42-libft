@@ -6,22 +6,24 @@
 /*   By: pmelo-ca <pmelo-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/25 12:21:54 by pmelo-ca          #+#    #+#             */
-/*   Updated: 2023/07/27 10:39:47 by pmelo-ca         ###   ########.fr       */
+/*   Updated: 2023/07/31 14:35:24 by pmelo-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <string.h>
 
 char	*ft_strchr(const char *s, int c)
 {
 	size_t	i;
 
 	i = 0;
-	while (s[i])
+	while (s[i] && c <= 126)
 	{
 		if (s[i] == c)
 			return (&s[i]);
 		i++;
 	}
-	if (c == '\0')
+	if (c == '\0' || c >= 127)
 		return (&s[i]);
 	return ((void *)0);
 }

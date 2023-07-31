@@ -6,7 +6,7 @@
 /*   By: pmelo-ca <pmelo-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/25 12:17:27 by pmelo-ca          #+#    #+#             */
-/*   Updated: 2023/07/27 15:24:18 by pmelo-ca         ###   ########.fr       */
+/*   Updated: 2023/07/31 15:56:59 by pmelo-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_atoi(const char *nptr)
 	sign = 1;
 	while (nptr[i] == ' ' || (nptr[i] >= '\b' && nptr[i] <= '\r'))
 		i++;
-	while (nptr[i] == '-' || nptr[i] == '+')
+	if (nptr[i] == '-' || nptr[i] == '+')
 	{
 		if (nptr[i] == '-')
 			sign *= -1;

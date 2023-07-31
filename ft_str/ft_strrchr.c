@@ -6,9 +6,11 @@
 /*   By: pmelo-ca <pmelo-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/25 13:00:42 by pmelo-ca          #+#    #+#             */
-/*   Updated: 2023/07/27 14:13:55 by pmelo-ca         ###   ########.fr       */
+/*   Updated: 2023/07/31 14:39:46 by pmelo-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <string.h>
 
 char	*ft_strrchr(const char *s, int c)
 {
@@ -19,11 +21,11 @@ char	*ft_strrchr(const char *s, int c)
 	x = (void *)0;
 	while (s[i])
 	{
-		if (s[i] == c)
+		if (s[i] == c && c <= 126)
 			x = &s[i];
 		i++;
 	}
-	if (c == '\0')
+	if (c == '\0' || c >= 127)
 		return (&s[i]);
 	return (x);
 }
