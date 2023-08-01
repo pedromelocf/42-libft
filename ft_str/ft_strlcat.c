@@ -6,9 +6,11 @@
 /*   By: pmelo-ca <pmelo-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/24 20:06:05 by pmelo-ca          #+#    #+#             */
-/*   Updated: 2023/07/27 14:17:02 by pmelo-ca         ###   ########.fr       */
+/*   Updated: 2023/07/31 21:43:33 by pmelo-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <string.h>
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
@@ -19,17 +21,17 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	src_lenght = 0;
 	dst_lenght = 0;
 	i = 0;
-	while (src[dst_lenght])
+	while (dst[dst_lenght])
 		dst_lenght++;
 	while (src[src_lenght])
 		src_lenght++;
-	while ((src[i]) && (dst_lenght + 1) < (size - 1))
+	if (size <= dst_lenght)
+		return (src_lenght + size);
+	while (src[i] && dst_lenght + i < size - 1)
 	{
-		dst[dst_lenght + i - 1] = src[i];
+		dst[dst_lenght + i] = src[i];
 		i++;
 	}
-	dst[dst_lenght + 1] = '\0';
-	if (size < dst)
-		return (src + size);
+	dst[dst_lenght + i] = '\0';
 	return (dst_lenght + src_lenght);
 }
