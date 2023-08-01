@@ -6,13 +6,16 @@
 /*   By: pmelo-ca <pmelo-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/25 13:17:09 by pmelo-ca          #+#    #+#             */
-/*   Updated: 2023/07/27 14:43:12 by pmelo-ca         ###   ########.fr       */
+/*   Updated: 2023/08/01 19:31:07 by pmelo-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <string.h>
+#include <stdlib.h>
+
 char	*ft_strdup(const char *s)
 {
-	size_t	*newstring;
+	char*	newstring;
 	size_t	index1;
 	size_t	index2;
 
