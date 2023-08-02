@@ -6,7 +6,7 @@
 /*   By: pmelo-ca <pmelo-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/25 13:00:42 by pmelo-ca          #+#    #+#             */
-/*   Updated: 2023/08/01 15:33:25 by pmelo-ca         ###   ########.fr       */
+/*   Updated: 2023/08/02 11:03:50 by pmelo-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	size_t	i;
-	const char *x;
+	size_t		i;
+	const char	*x;
 
 	i = 0;
 	x = (void *)0;
@@ -26,6 +26,6 @@ char	*ft_strrchr(const char *s, int c)
 		i++;
 	}
 	if (c == '\0' || c >= 127)
-		return (char*)&s[i];
-	return (char*)x;
+		return ((char *)&s[i]);
+	return ((char *)x);
 }
