@@ -6,7 +6,7 @@
 /*   By: pmelo-ca <pmelo-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 11:03:13 by pmelo-ca          #+#    #+#             */
-/*   Updated: 2023/08/04 13:35:55 by pmelo-ca         ###   ########.fr       */
+/*   Updated: 2023/08/05 13:13:35 by pmelo-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	const char	*ptrsrc;
 	size_t	i;
 
-	ptrdest =dest;
+	ptrdest = dest;
 	ptrsrc = src;
 	i = 0;
 	if (dest <= src)
 	{
-	while (i < n)
+		while (i < n)
 		{
 			ptrdest[i] = ptrsrc[i];
 			i++;
