@@ -6,7 +6,7 @@
 /*   By: pmelo-ca <pmelo-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/24 19:08:49 by pmelo-ca          #+#    #+#             */
-/*   Updated: 2023/08/07 11:11:08 by pmelo-ca         ###   ########.fr       */
+/*   Updated: 2023/08/07 12:30:27 by pmelo-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 # define LIBFT_H
 
 # include <stdlib.h>
+# include <string.h>
+# include <unistd.h>
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -40,5 +42,6 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_strdup(const char *s);
 char	*ft_substr(char const *s, unsigned int start,size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
 
 #endif
