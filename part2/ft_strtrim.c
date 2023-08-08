@@ -1,20 +1,31 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: pmelo-ca <pmelo-ca@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/08/08 11:02:17 by pmelo-ca          #+#    #+#             */
+/*   Updated: 2023/08/08 11:02:43 by pmelo-ca         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	char *trimmed_string;
-	size_t set_counter;
-	size_t s1_len;
-	size_t index;
-	size_t index2;
+	char	*trimmed_string;
+	size_t	set_counter;
+	size_t	s1_len;
+	size_t	index;
+	size_t	index2;
 
 	s1_len = 0;
 	set_counter = 0;
 	index = 0;
 	while (s1[s1_len + set_counter])
 	{
-		if (s1[s1_len] == set )
+		if (s1[s1_len] == set)
 			set_counter++;
 		s1_len++;
 	}

@@ -6,7 +6,7 @@
 /*   By: pmelo-ca <pmelo-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/02 16:32:07 by pmelo-ca          #+#    #+#             */
-/*   Updated: 2023/08/03 14:56:43 by pmelo-ca         ###   ########.fr       */
+/*   Updated: 2023/08/08 11:03:53 by pmelo-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	unsigned const char	*ptrs1;
 	unsigned const char	*ptrs2;
-	int			i;
+	int					i;
 
 	ptrs1 = s1;
 	ptrs2 = s2;
@@ -24,7 +24,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	while (i < n)
 	{
 		if (ptrs1[i] != ptrs2[i])
-			return (int)(ptrs1[i] - ptrs2[i]);
+			return ((int)(ptrs1[i] - ptrs2[i]));
 		i++;
 	}
 	return (0);

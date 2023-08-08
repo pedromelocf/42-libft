@@ -6,22 +6,22 @@
 /*   By: pmelo-ca <pmelo-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/25 13:15:22 by pmelo-ca          #+#    #+#             */
-/*   Updated: 2023/08/07 17:20:16 by pmelo-ca         ###   ########.fr       */
+/*   Updated: 2023/08/08 11:03:17 by pmelo-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_calloc(size_t nmemb, size_t size)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	char *array;
-	size_t index;
-	size_t maxint_validator;
+	char	*array;
+	size_t	index;
+	size_t	maxint_validator;
 
 	index = 0;
 	maxint_validator = (nmemb * size);
 	if (nmemb == 0 || size == 0)
-		return(malloc(0));
+		return (malloc(0));
 	if (maxint_validator / nmemb != size)
 		return (NULL);
 	array = (void *)malloc(size * nmemb);
