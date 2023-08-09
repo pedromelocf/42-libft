@@ -6,12 +6,11 @@
 /*   By: pmelo-ca <pmelo-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/25 13:17:09 by pmelo-ca          #+#    #+#             */
-/*   Updated: 2023/08/02 11:04:35 by pmelo-ca         ###   ########.fr       */
+/*   Updated: 2023/08/09 11:33:40 by pmelo-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <string.h>
+#include "libft.h"
 
 char	*ft_strdup(const char *s)
 {
@@ -24,6 +23,8 @@ char	*ft_strdup(const char *s)
 	while (s[index1])
 		index1++;
 	newstring = (char *)malloc(sizeof(char) * index1 + 1);
+	if (!newstring)
+		return (NULL);
 	while (index2 < index1)
 	{
 		newstring[index2] = s[index2];
