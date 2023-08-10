@@ -6,7 +6,7 @@
 /*   By: pmelo-ca <pmelo-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/08 11:02:20 by pmelo-ca          #+#    #+#             */
-/*   Updated: 2023/08/08 11:02:22 by pmelo-ca         ###   ########.fr       */
+/*   Updated: 2023/08/10 00:21:19 by pmelo-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	counter = 0;
 	s_len = ft_strlen(s);
 	if (start >= s_len)
-		return (malloc(1));
+		return (ft_strdup(""));
 	if (len > s_len - start)
 		len = s_len - start;
 	substring = malloc(sizeof(char) * (len + 1));
