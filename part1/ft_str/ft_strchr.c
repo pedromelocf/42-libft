@@ -6,7 +6,7 @@
 /*   By: pmelo-ca <pmelo-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/25 12:21:54 by pmelo-ca          #+#    #+#             */
-/*   Updated: 2023/08/09 15:29:55 by pmelo-ca         ###   ########.fr       */
+/*   Updated: 2023/08/11 12:19:05 by pmelo-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strchr(const char *s, int c)
 {
 	size_t	i;
-	size_t s_len;
+	size_t	s_len;
 
 	i = 0;
 	s_len = ft_strlen(s);
