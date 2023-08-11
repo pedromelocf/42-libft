@@ -6,11 +6,11 @@
 /*   By: pmelo-ca <pmelo-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/25 13:00:42 by pmelo-ca          #+#    #+#             */
-/*   Updated: 2023/08/02 11:03:50 by pmelo-ca         ###   ########.fr       */
+/*   Updated: 2023/08/11 15:38:04 by pmelo-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {

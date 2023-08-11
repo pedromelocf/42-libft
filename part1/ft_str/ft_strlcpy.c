@@ -6,11 +6,11 @@
 /*   By: pmelo-ca <pmelo-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/24 20:00:42 by pmelo-ca          #+#    #+#             */
-/*   Updated: 2023/08/02 11:03:36 by pmelo-ca         ###   ########.fr       */
+/*   Updated: 2023/08/11 15:37:46 by pmelo-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {

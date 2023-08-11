@@ -6,11 +6,11 @@
 /*   By: pmelo-ca <pmelo-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 10:39:06 by pmelo-ca          #+#    #+#             */
-/*   Updated: 2023/08/02 11:04:17 by pmelo-ca         ###   ########.fr       */
+/*   Updated: 2023/08/11 15:37:06 by pmelo-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {
