@@ -6,7 +6,7 @@
 /*   By: pmelo-ca <pmelo-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/11 11:57:19 by pmelo-ca          #+#    #+#             */
-/*   Updated: 2023/08/11 12:17:08 by pmelo-ca         ###   ########.fr       */
+/*   Updated: 2023/08/11 14:59:41 by pmelo-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,6 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	
+	ft_putstr_fd(&*s, fd);
+	write(fd, "\n", 1);
 }
