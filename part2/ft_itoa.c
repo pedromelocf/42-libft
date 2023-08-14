@@ -6,48 +6,61 @@
 /*   By: pmelo-ca <pmelo-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/11 11:58:45 by pmelo-ca          #+#    #+#             */
-/*   Updated: 2023/08/14 19:06:16 by pmelo-ca         ###   ########.fr       */
+/*   Updated: 2023/08/14 20:02:18 by pmelo-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+size_t	ft_count_decimal_houses(int n)
+{
+	long int number1;
+	size_t	size_alloc;
+
+	number1 = n;
+	size_alloc = 0;
+	while(number1 != 0)
+	{
+		size_alloc++;
+		number1 = number1 / 10;
+	}
+	return (size_alloc);
+}
+char	*ft_increment_string(size_t decimal_houses, size_t index, char *string, long int number)
+{
+	while (decimal_houses != index)
+	{
+		decimal_houses--;
+		string[decimal_houses] = number % 10 + '0';
+		number = number / 10;
+	}
+	return (string);
+}
+
 char	*ft_itoa(int n)
 {
 	char *string;
-	long int number;
-	size_t alloc_size;
+	size_t decimal_houses;
 	size_t	index;
-	long int number2;
+	long int number;
 
 	index = 0;
-	alloc_size = 0;
 	number = n;
-	number2 = n;
-	while(number != 0)
-	{
-		alloc_size++;
-		number = number / 10;
-	}
-	if (number2 <= 0)
-		alloc_size++;
-	string = (char *)malloc(alloc_size + 1 * sizeof(char));
+	decimal_houses = ft_count_decimal_houses(n);
+	if (number <= 0)
+		decimal_houses++;
+	string = (char *)malloc(decimal_houses + 1 * sizeof(char));
 	if (!(string))
 		return (NULL);
-	if (number2 < 0)
+	if (number < 0)
 	{
-		number2 *= -1;
+		number *= -1;
 		index++;
 		string[0] = '-';
 	}
-	string[alloc_size] = '\0';
-	if (number2 == 0)
+	string[decimal_houses] = '\0';
+	if (number == 0)
 		string[0] = '0';
-	while (alloc_size != index)
-	{
-		alloc_size--;
-		string[alloc_size] = number2 % 10 + '0';
-		number2 = number2 / 10;
-	}
+	string = ft_increment_string(decimal_houses, index, string, number);
 	return (string)	;
 }
