@@ -6,7 +6,7 @@
 /*   By: pmelo-ca <pmelo-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/26 09:09:21 by pmelo-ca          #+#    #+#             */
-/*   Updated: 2023/08/12 19:25:02 by pmelo-ca         ###   ########.fr       */
+/*   Updated: 2023/08/14 10:02:42 by pmelo-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,14 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 
 	i = 0;
 	if (!little[0])
-		return (big);
+		return ((char *)big);
 	while (big[i] && (i < len))
 	{
 		j = 0;
 		while (big[i + j] == little[j] && (i + j < len))
 		{
 			if (little[j + 1] == '\0')
-				return (big + i);
+				return ((char *)big + i);
 			j++;
 		}
 		i++;
