@@ -6,7 +6,7 @@
 /*   By: pmelo-ca <pmelo-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/08 11:02:17 by pmelo-ca          #+#    #+#             */
-/*   Updated: 2023/08/12 22:18:39 by pmelo-ca         ###   ########.fr       */
+/*   Updated: 2023/08/15 11:42:28 by pmelo-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,21 +18,32 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t		s1_lenght;
 	size_t		set_lenght;
 	size_t		index;
+	size_t 		counter;
 
+	counter = 0;
 	s1_lenght = strlen(s1);
 	set_lenght = 0;
 	index = 0;
+	if(!s1 )
+		return (NULL);
 	while (s1[index] && strchr(set, s1[index]) != NULL)
 	{
-		set_lenght++;
 		index++;
-	}
-	while (s1[s1_lenght] && strrchr(set, s1[s1_lenght]) != NULL)
-	{
 		set_lenght++;
+	}
+	while (index < s1_lenght && strrchr(set, s1[s1_lenght - 1]) != NULL)
+	{
 		s1_lenght--;
 	}
-	trimmed_string = (char *)malloc(sizeof (char) * (ft_strlen(s1) - s1_lenght + index + 1));
-	ft_strlcpy(trimmed_string, s1, s1_lenght);
+	trimmed_string = (char *)malloc(sizeof(char) * (s1_lenght - set_lenght + 1));
+	if (trimmed_string == NULL)
+		return (NULL);
+	while (counter < s1_lenght - set_lenght)
+	{
+		trimmed_string[counter] = s1[index];
+		index++;
+		counter++;
+	}
+	trimmed_string[counter] = '\0';
 	return (trimmed_string);
 }
