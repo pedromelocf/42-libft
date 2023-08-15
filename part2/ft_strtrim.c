@@ -6,7 +6,7 @@
 /*   By: pmelo-ca <pmelo-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/08 11:02:17 by pmelo-ca          #+#    #+#             */
-/*   Updated: 2023/08/15 18:10:52 by pmelo-ca         ###   ########.fr       */
+/*   Updated: 2023/08/15 18:37:19 by pmelo-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,20 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	char*	trimmed_string;
-	size_t		s1_lenght;
-	size_t		index;
-	size_t 		counter;
+	char	*trimmed_string;
+	size_t	s1_lenght;
+	size_t	index;
+	size_t	counter;
 
 	counter = 0;
 	s1_lenght = strlen(s1);
 	index = 0;
-	if(!s1 )
+	if (!s1)
 		return (NULL);
 	while (s1[index] && ft_strchr(set, s1[index]) != NULL)
-	{
 		index++;
-	}
-	while (index < s1_lenght && ft_strrchr(set, s1[s1_lenght - 1]) != NULL)
-	{
+	while (index < s1_lenght && strrchr(set, s1[s1_lenght - 1]) != NULL)
 		s1_lenght--;
-	}
 	trimmed_string = (char *)malloc(sizeof(char) * (s1_lenght - index + 1));
 	if (trimmed_string == NULL)
 		return (NULL);
