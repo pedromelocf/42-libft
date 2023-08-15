@@ -6,7 +6,7 @@
 /*   By: pmelo-ca <pmelo-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/08 11:02:17 by pmelo-ca          #+#    #+#             */
-/*   Updated: 2023/08/15 11:42:28 by pmelo-ca         ###   ########.fr       */
+/*   Updated: 2023/08/15 18:10:52 by pmelo-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,29 +16,26 @@ char	*ft_strtrim(char const *s1, char const *set)
 {
 	char*	trimmed_string;
 	size_t		s1_lenght;
-	size_t		set_lenght;
 	size_t		index;
 	size_t 		counter;
 
 	counter = 0;
 	s1_lenght = strlen(s1);
-	set_lenght = 0;
 	index = 0;
 	if(!s1 )
 		return (NULL);
-	while (s1[index] && strchr(set, s1[index]) != NULL)
+	while (s1[index] && ft_strchr(set, s1[index]) != NULL)
 	{
 		index++;
-		set_lenght++;
 	}
-	while (index < s1_lenght && strrchr(set, s1[s1_lenght - 1]) != NULL)
+	while (index < s1_lenght && ft_strrchr(set, s1[s1_lenght - 1]) != NULL)
 	{
 		s1_lenght--;
 	}
-	trimmed_string = (char *)malloc(sizeof(char) * (s1_lenght - set_lenght + 1));
+	trimmed_string = (char *)malloc(sizeof(char) * (s1_lenght - index + 1));
 	if (trimmed_string == NULL)
 		return (NULL);
-	while (counter < s1_lenght - set_lenght)
+	while (counter < s1_lenght - index + counter)
 	{
 		trimmed_string[counter] = s1[index];
 		index++;
