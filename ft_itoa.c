@@ -6,7 +6,7 @@
 /*   By: pmelo-ca <pmelo-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/11 11:58:45 by pmelo-ca          #+#    #+#             */
-/*   Updated: 2023/08/15 18:45:01 by pmelo-ca         ###   ########.fr       */
+/*   Updated: 2023/08/18 14:44:02 by pmelo-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 size_t	ft_count_decimal_houses(int n)
 {
 	long int	number1;
-	size_t	size_alloc;
+	size_t		size_alloc;
 
 	number1 = n;
 	size_alloc = 0;
@@ -28,7 +28,7 @@ size_t	ft_count_decimal_houses(int n)
 }
 
 char	*ft_increment_itoa_string(size_t decimal_houses, size_t index,
-	char *string, long int number)
+		char *string, long int number)
 {
 	while (decimal_houses != index)
 	{
@@ -41,9 +41,9 @@ char	*ft_increment_itoa_string(size_t decimal_houses, size_t index,
 
 char	*ft_itoa(int n)
 {
-	char	*string;
-	size_t	decimal_houses;
-	size_t	index;
+	char		*string;
+	size_t		decimal_houses;
+	size_t		index;
 	long int	number;
 
 	index = 0;
