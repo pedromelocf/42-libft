@@ -6,13 +6,13 @@
 /*   By: pmelo-ca <pmelo-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/11 11:58:59 by pmelo-ca          #+#    #+#             */
-/*   Updated: 2023/08/20 14:12:02 by pmelo-ca         ###   ########.fr       */
+/*   Updated: 2023/08/20 15:41:12 by pmelo-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	**ft_count_substrings(char const *s, char c, char **splited_array)
+static size_t	ft_count_substrings(char const *s, char c)
 {
 	size_t	arrays_counter;
 	size_t	s_index;
@@ -30,8 +30,7 @@ static char	**ft_count_substrings(char const *s, char c, char **splited_array)
 			s_index++;
 		}
 	}
-	splited_array = (char **)malloc(sizeof(char *) * arrays_counter);
-	return (splited_array);
+	return (arrays_counter);
 }
 
 char	**ft_split(char const *s, char c)
@@ -42,7 +41,8 @@ char	**ft_split(char const *s, char c)
 
 	index = 0;
 	start = (char *)s;
-	splited_array = ft_count_substrings(s, c, splited_array);
+	splited_array = (char **)malloc(sizeof(char *) * (ft_count_substrings(s,
+					c)));
 	if (s == NULL || splited_array == NULL)
 		return (NULL);
 	while (*s)

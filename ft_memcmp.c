@@ -6,7 +6,7 @@
 /*   By: pmelo-ca <pmelo-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/02 16:32:07 by pmelo-ca          #+#    #+#             */
-/*   Updated: 2023/08/11 15:37:20 by pmelo-ca         ###   ########.fr       */
+/*   Updated: 2023/08/20 15:40:45 by pmelo-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	unsigned const char	*ptrs1;
 	unsigned const char	*ptrs2;
-	int					i;
+	size_t				i;
 
 	ptrs1 = s1;
 	ptrs2 = s2;

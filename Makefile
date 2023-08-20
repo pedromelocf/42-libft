@@ -1,4 +1,5 @@
 NAME = libft.a
+
 SRCS = ft_isalpha.c \
 	ft_isdigit.c \
 	ft_isalnum.c \
@@ -41,10 +42,10 @@ FLAGS = -Wall -Werror -Wextra
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	ar -rc $(NAME) $(OBJ)
 
-%.o: %c
-	$(CC) $(FLAGS) -I $(INCLUDES) -c $< -o $@
+%.o: %.c libft.h
+	$(CC) $(FLAGS) -c $< -o $@
+	ar rc $(NAME) $@
 
 clean :
 	rm -f $(OBJ)
