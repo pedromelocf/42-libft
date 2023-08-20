@@ -6,13 +6,13 @@
 /*   By: pmelo-ca <pmelo-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/11 11:58:45 by pmelo-ca          #+#    #+#             */
-/*   Updated: 2023/08/18 14:44:02 by pmelo-ca         ###   ########.fr       */
+/*   Updated: 2023/08/20 13:23:05 by pmelo-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_count_decimal_houses(int n)
+static size_t	ft_count_decimal_houses(int n)
 {
 	long int	number1;
 	size_t		size_alloc;
@@ -27,7 +27,7 @@ size_t	ft_count_decimal_houses(int n)
 	return (size_alloc);
 }
 
-char	*ft_increment_itoa_string(size_t decimal_houses, size_t index,
+static char	*ft_increment_itoa_string(size_t decimal_houses, size_t index,
 		char *string, long int number)
 {
 	while (decimal_houses != index)
