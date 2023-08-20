@@ -14,7 +14,7 @@ $(NAME): $(OBJ)
 	ar -rc $(NAME) $(OBJ)
 
 %.o: %c
-	gcc $(FLAGS) -I $(INCLUDES) -c $< -o $@
+	$(CC) $(FLAGS) -I $(INCLUDES) -c $< -o $@
 
 clean :
 	rm -f $(OBJ)
