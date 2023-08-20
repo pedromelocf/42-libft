@@ -6,7 +6,7 @@
 /*   By: pmelo-ca <pmelo-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/11 11:58:59 by pmelo-ca          #+#    #+#             */
-/*   Updated: 2023/08/20 13:22:31 by pmelo-ca         ###   ########.fr       */
+/*   Updated: 2023/08/20 14:12:02 by pmelo-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,8 @@ static char	**ft_count_substrings(char const *s, char c, char **splited_array)
 {
 	size_t	arrays_counter;
 	size_t	s_index;
-	size_t	array_validation;
 
 	s_index = 0;
-	array_validation = 0;
 	arrays_counter = 1;
 	while (s[s_index])
 	{
