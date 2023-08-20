@@ -6,14 +6,14 @@
 /*   By: pmelo-ca <pmelo-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/11 11:58:59 by pmelo-ca          #+#    #+#             */
-/*   Updated: 2023/08/20 09:58:57 by pmelo-ca         ###   ########.fr       */
+/*   Updated: 2023/08/20 10:08:15 by pmelo-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-static	**ft_count_substrings(char const *s, char c, char **splited_array)
+char	**ft_count_substrings(char const *s, char c, char **splited_array)
 {
 	size_t	arrays_counter;
 	size_t	s_index;
@@ -42,12 +42,10 @@ char	**ft_split(char const *s, char c)
 	char	**splited_array;
 	char	*start;
 	size_t	index;
-	size_t	substring_len;
 
 	index = 0;
 	start = (char *)s;
 	splited_array = ft_count_substrings(s, c, splited_array);
-	substring_len = ft_strlen(s);
 	if (s == NULL || splited_array == NULL)
 		return (NULL);
 	while (*s)
@@ -55,21 +53,13 @@ char	**ft_split(char const *s, char c)
 		if (*s == c)
 		{
 			if (s > start)
-			{
-				substring_len = s - start;
-				splited_array[index] = ft_substr(start, 0, substring_len);
-				index++;
-			}
+				splited_array[index++] = ft_substr(start, 0, (s - start));
 			start = (char *)(s + 1);
 		}
 		s++;
 	}
 	if (s > start)
-	{
-		substring_len = s - start;
-		splited_array[index] = ft_substr(start, 0, substring_len);
-		index++;
-	}
+		splited_array[index++] = ft_substr(start, 0, (s - start));
 	splited_array[index] = NULL;
 	return (splited_array);
 }
