@@ -1,10 +1,16 @@
-# Libft
-<h2> Your very first own library </h2>
 
-<h2> Grade </h2>
+<div align="center">
+  <h1> Libft </h1>
+  <h5> Your very first own library </h5>
+</div>
 
-[![pmelo-ca's 42 Libft Score](https://badge42.vercel.app/api/v2/clihv3wi1001608lcdbe6sir1/project/3193341)](https://pedromelodev.com/)
+<p align="center">
+  <img src="https://github.com/pedromelocf/utilities/blob/master/libfte.png" />
+</p>
 
+
+
+<div align="center">
 
 This is my first step into the 42 course journey.
 
@@ -19,3 +25,12 @@ https://github.com/users/pedromelocf/projects/1
 <h3>This is my Kanban and Documentation: </h3>
 https://edgeco.notion.site/ed593805e69d43f09cc5e500c350ab71?v=67d4052fdb734a73bccf148e910d53db
 
+</div>
+
+<div align="center">
+  <h2> Grade </h2>
+</div>
+
+<div align="center">
+  <img src="https://github.com/pedromelocf/utilities/blob/master/100_grade.png" />
+</div>
