@@ -24,7 +24,6 @@ SRCS = src/ft_isalpha.c \
 	src/ft_calloc.c \
 	src/ft_strdup.c \
 	src/ft_substr.c \
-	src/ft_strjoin.c \
 	src/ft_strtrim.c \
 	src/ft_split.c \
 	src/ft_itoa.c \
@@ -33,25 +32,45 @@ SRCS = src/ft_isalpha.c \
 	src/ft_putchar_fd.c \
 	src/ft_putstr_fd.c \
 	src/ft_putendl_fd.c \
-	src/ft_putnbr_fd.c
+	src/ft_putnbr_fd.c \
+	src/ft_clean_matrix.c
 
 OBJ = $(SRCS:.c=.o)
-INCLUDES = includes/libft.h
+INCLUDES = ../libft.h
 FLAGS = -Wall -Werror -Wextra
+
+#MESSAGES
+MESSAGE1 = "------------------Compiling Libft Objects!------------------"
+MESSAGE2 = "---------------Objects Compiled Successfully!----------------"
+MESSAGE3 = "----------------libft.a Compiled Successfully!---------------"
+MESSAGE4 = "-------------------- Libft Objects cleaned!------------------"
+MESSAGE5 = "-------------------- Libft Binarie cleaned!------------------"
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
+	@ echo ' '
+	@ echo $(MESSAGE1)
+	@ ar rcs $(NAME) $(OBJ)
+	@ echo ' '
+	@ echo $(MESSAGE2)
+	@ echo ' '
+	@ echo $(MESSAGE3)
+	@ echo ' '
+	@ echo ' '
 
 %.o: %.c $(INCLUDES)
-	$(CC) $(FLAGS) -c $< -o $@
-	ar rc $(NAME) $@
+	@ $(CC) $(FLAGS) -c $< -o $@
 
 clean :
-	rm -f $(OBJ)
+	@ rm -f $(OBJ)
+	@ echo $(MESSAGE4)
+	@ echo ' '
 
 fclean : clean
-	rm -f $(NAME)
+	@ rm -f $(NAME)
+	@ echo $(MESSAGE5)
+	@ echo ' '
 
 re : fclean all
 
