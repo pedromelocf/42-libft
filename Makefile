@@ -33,6 +33,7 @@ SRCS = src/ft_isalpha.c \
 	src/ft_putstr_fd.c \
 	src/ft_putendl_fd.c \
 	src/ft_putnbr_fd.c \
+	src/ft_strjoin.c \
 	src/ft_clean_matrix.c
 
 OBJ = $(SRCS:.c=.o)
