@@ -14,11 +14,21 @@
 
 # define LIBFT_H
 
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 1000
+# endif
+
+# define NONCAPHEX "0123456789abcdef"
+# define CAPHEX "0123456789ABCDEF"
+
 # include <fcntl.h>
 # include <stdlib.h>
 # include <string.h>
 # include <unistd.h>
+# include <stdarg.h>
+# include <stdio.h>
 
+//LIBFT
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
@@ -54,5 +64,25 @@ void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 char	*ft_strjoin(char const *s1, char const *s2);
 void	ft_clean_matrix(char **matrix);
+
+//GNL
+char	*ft_join_buf(char const *s1, char const *s2);
+char	*ft_strdup(const char *s);
+char	*ft_strchr_gnl(const char *s, int c);
+char	*get_next_line(int fd);
+
+//PRINTF
+int	ft_printf(const char *str, ...);
+int	ft_putnbr_base(unsigned long int nbr, char *base);
+int	ft_putchar(char c);
+int	ft_putstr(char *str);
+int	ft_putnbr(int nb);
+int	ft_put_unsigned(long int nb);
+int	ft_put_voidpointer(char *str);
+int	ft_put_hex(unsigned long int nbr, const char *str, int i);
+int	ft_putnbr_hex(unsigned long int nbr, int index, char *base);
+int	ft_check_conversion(const char *str, int i, va_list args);
+int	ft_check_conversion_fd(const char *str, int i, va_list args, int fd);
+int	ft_dprintf(int fd, const char *str, ...);
 
 #endif

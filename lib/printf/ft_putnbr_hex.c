@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./ft_printf.h"
+#include "../libft.h"
 
 int	ft_putnbr_hex(unsigned long int nbr, int index, char *base)
 {

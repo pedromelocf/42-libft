@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./ft_printf.h"
+#include "../libft.h"
 
 int	ft_check_conversion_fd(const char *str, int i, va_list args, int fd)
 {
