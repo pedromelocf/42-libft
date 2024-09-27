@@ -64,6 +64,7 @@ void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 char	*ft_strjoin(char const *s1, char const *s2);
 void	ft_clean_matrix(char **matrix);
+int		ft_get_matrix_len(char **matrix);
 
 //GNL
 char	*ft_join_buf(char const *s1, char const *s2);
